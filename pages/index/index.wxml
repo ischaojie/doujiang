@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="">
+  <van-toast id="van-toast" />
+
+  <!-- 展示如何获取地址 -->
+  <van-notice-bar left-icon="volume-o" scrollable="false" color="#000" backgroundColor="#ebfaeb" text="如何获取豆瓣广播地址" bind:click="noticeAddr" />
+
+  <van-popup show="{{ showNotice }}" closeable="true" close-icon="close" bind:close="noticeAddrClose">
+    <view style="padding:24rpx">
+      <view style="text-align:right">
+        <van-icon name="close" bind:click="noticeAddrClose" />
+      </view>
+
+
+      <view style="text-align:center; padding-bottom:12rpx">如何获取app端广播地址</view>
+      <view>
+        第一步：点击广播右上角
+        <image mode="aspectFit" src="../../utils/reshare_1.jpg"></image>
+      </view>
+      <view>
+        第二步：点击复制链接(!注意去除昵称)
+        <image mode="aspectFit" src="../../utils/reshare_2.jpg"></image>
+      </view>
+      <view>
+        网页端直接在浏览器中复制广播地址即可。
+      </view>
+    </view>
+  </van-popup>
+
+
+  <!-- 豆酱header -->
+  <view class="doujiang">
+    <view class="doujiang-h">
+      <image style="width: 32px; height: 32px; padding: 0 4px " mode="scaleToFill" src="../../utils/dou.png"></image>
+      豆酱
+      <image style="width: 34px; height: 34px; padding: 0 4px " mode="scaleToFill" src="../../utils/jiang.png"></image>
+    </view>
+
+    <view style="color: #6E6E6E; padding-left:18rpx">豆瓣第三方抽奖助手</view>
+  </view>
+
+  <view class="doujiang-main">
+    <van-cell-group>
+
+      <van-field class="doujiang-c" value="{{ addr }}" clearable="true" label="广播地址" error-message="{{ errorAddr }}" bind:change="addrChange" placeholder="请输入地址" size="large" focus="true" />
+
+      <van-cell class="doujiang-c" title="抽奖人数" size="large">
+        <van-stepper value="{{ luckyPeople }}" bind:change="onPeopleChange" />
+      </van-cell>
+
+      <van-cell class="doujiang-c" title="截止时间" size="large" is-link value="{{luckyDate}}" bind:click="showPop">
+      </van-cell>
+
+      <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+        <van-datetime-picker type="datetime" value="{{ currentDate }}" bind:confirm="getDate" formatter="{{ formatter }}" bind:cancel="onClose" bind:input="timeInput" />
+      </van-popup>
+
+    </van-cell-group>
+    <van-button class="next" type="primary" bind:click="next">开始抽奖</van-button>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/lucky.wxml-->
+<view>
+
+  <view class="info">
+    <view class="info-i">抽取
+      <text class="label">{{luckyPeopleNum}}</text>位幸运观众</view>
+    <view class="info-i">抽奖截止
+      <text class="label">{{ luckyDate }}</text>
+    </view>
+
+  </view>
+  <view class="copy">以下用户中奖：</view>
+
+  <!-- 抽奖动画 -->
+  <view wx:if="{{showDou}}">
+    <view class="doujiang-h">
+      <image style="width: 64px; height: 64px; padding: 0 4px " mode="scaleToFill" src="../../utils/dou.png"></image>
+      <van-loading vertical color="#00D260"/>
+      正在抽奖
+      <image style="width: 66px; height: 66px; padding: 0 4px " mode="scaleToFill" src="../../utils/jiang.png"></image>
+    </view>
+  </view>
+
+  <!-- 中奖用户展示 -->
+  <view wx:if="{{showOrHidden}}">
+
+    <view class="lucky">
+      <view wx:for="{{luckyPeople}}" wx:key="name">
+        <view class="lucky-p">
+          <image style="width: 32px; height: 32px; padding: 0 4px " mode="scaleToFill" src="{{ item.pic }}"></image>
+          <view>{{ item.name }}</view>
+        </view>
+      </view>
+    </view>
+    <view class="copy" bindtap='copyLuckyPeople' data-text="{{luckyPeopleName}}">一键复制中奖用户</view>
+  </view>
+
+</view>

@@ -1,0 +1,62 @@
+/* pages/lucky.wxss */
+
+.info {
+  height: 256rpx;
+  margin: 28rpx;
+  padding: 28rpx 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1rpx, solid;
+
+  background: #fff;
+
+  box-shadow: 0, 0, 2rpx, #000;
+}
+
+.info-i {
+  margin: 24rpx 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.lucky {
+  margin: 56rpx 0;
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.lucky-p {
+  margin: 12rpx 24rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label{
+  color: rgb(47, 168, 88);
+  padding: 4rpx;
+
+}
+.copy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(47, 168, 88);
+}
+
+.doujiang-h{
+  /* font-size: 1.4rem; */
+  margin: 56rpx 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}

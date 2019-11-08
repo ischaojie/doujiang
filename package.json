@@ -1,0 +1,15 @@
+{
+  "name": "doujiang",
+  "version": "1.0.0",
+  "description": "douban 抽奖助手",
+  "main": "app.js",
+  "dependencies": {
+    "vant-weapp": "^0.5.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shiniao",
+  "license": "MIT"
+}

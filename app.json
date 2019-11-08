@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/lucky/lucky"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "豆酱",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-cell": "vant-weapp/cell",
+    "van-cell-group": "vant-weapp/cell-group",
+    "van-field": "vant-weapp/field",
+    "van-stepper": "vant-weapp/stepper",
+    "van-datetime-picker": "vant-weapp/datetime-picker",
+    "van-popup": "vant-weapp/popup",
+    "van-panel": "vant-weapp/panel",
+    "van-icon": "vant-weapp/icon",
+    "van-loading": "vant-weapp/loading",
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "van-toast": "vant-weapp/toast"
+  },
+  "sitemapLocation": "sitemap.json"
+}
